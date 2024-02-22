@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  
+    //printf("%d",printf("karpagamaheswari"));
+  int a,b;
+   scanf("%d%d",&a,&b);
+  a=a+b;
+  b=a-b;
+  a=a-b;
+  printf("%d",a);
+  printf("\n%d",b);
+   return 0;
+}
