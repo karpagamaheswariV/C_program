@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void getNibbles(unsigned char byte, unsigned char *higherNibble, unsigned char *lowerNibble) {
+    // Masking to extract higher and lower nibbles
+    *higherNibble = (byte & 0xF0) >> 4; // Extracting higher nibble
+    *lowerNibble = byte & 0x0F;         // Extracting lower nibble
+}
+
+int main() {
+    unsigned char byte = 0xAB; // Example byte
+
+    unsigned char higherNibble, lowerNibble;
+
+    // Function call to get nibbles
+    getNibbles(byte, &higherNibble, &lowerNibble);
+
+    printf("Byte: 0x%X\n", byte);
+    printf("Higher nibble: 0x%X\n", higherNibble);
+    printf("Lower nibble: 0x%X\n", lowerNibble);
+
+    return 0;
+}
