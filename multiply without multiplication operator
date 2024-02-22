@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int multiplyByTwo(int num) {
+    return num << 1; // Using left shift by one bit to multiply by 2
+}
+
+int main() {
+    int number = 7; // Example number
+
+    int result = multiplyByTwo(number);
+
+    printf("The result of multiplying %d by 2 is %d\n", number, result);
+
+    return 0;
+}
