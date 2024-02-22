@@ -1,0 +1,55 @@
+#include <stdio.h>
+void prime(int n){           //using function
+  int flag=0;
+  for(int i=2;i<n;i++){
+    if(n%i==0){
+      flag=1;
+      break;
+    }
+  }
+  if(flag==1){
+    printf("Not a prime number");
+  }
+  else{
+    printf("Prime number");
+  }
+}
+int main(void) {
+  /*int n,flag=0;               //without using function
+  scanf("%d",&n);
+  for (int i=2;i<n;i++){
+    if(n%i==0){
+      flag=1;
+      break;
+    }
+ }
+  if(flag==1){
+    printf("Not a Prime number");
+  }
+  else{
+    printf("Prime number");
+  }*/
+  int n;
+  scanf("%d",&n);
+  prime(n);
+return 0;
+}
+/*int prime(int n){
+  for(int i=2;i<n;i++){
+    if(n%i==0){
+      return 0;
+    }
+  }
+  return 1;
+}
+int main(){
+  int n,flag=0;
+  scanf("%d",&n);
+  if(prime(n)){                  //true=1
+    printf("prime no");
+  }
+  else{                       //false=0
+    printf("not a prime no");
+  }
+  return 0;
+}*/
