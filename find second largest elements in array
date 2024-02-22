@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+   int a[10] = {1, 11, 3, 4, 50, 69, 7, 8, 9, 0};
+   int loop, lar, sec;
+
+   if(a[0] > a[1]) {
+      lar= a[0];
+      sec  = a[1];
+   } else {
+      lar = a[1];
+      sec  = a[0];
+   }
+
+   for(loop = 2; loop < 10; loop++) {
+      if( lar < a[loop] ) {
+         sec = lar;
+         lar = a[loop];
+      } else if( sec < a[loop] ) {
+         sec =  a[loop];
+      }
+   }
+
+   printf("Largest - %d \nSecond - %d \n", lar, sec);   
+
+   return 0;
+}
