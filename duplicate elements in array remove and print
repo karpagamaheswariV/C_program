@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main(void) {
+  int *arr;
+  int n,dupl=0,count=0;
+  printf("Enter the size of the array: ");
+  scanf("%d", &n);
+  arr=(int*)malloc(n*sizeof(int));
+  for(int i=0;i<n;i++){
+    scanf("%d", &arr[i]);
+  }
+  printf("\nThe elements in array are: ");
+  for(int i=0;i<n;i++){
+    printf("%d ", arr[i]);
+  }
+  printf("\nThe duplicate elements are : ");
+  for(int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++){
+      if(arr[i]==arr[j]){
+        printf("%d ", arr[i]);
+        count++;
+      }
+    }
+  }
+  printf("\nThe elements after removing duplicates:");
+  for(int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++){
+        if(arr[i]==arr[j]){
+         break;
+        }
+        else{
+          printf("%d ", arr[i]);
+          break;
+        }
+    }
+  }
+  for(int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++){
+        if(arr[i]==arr[j]);
+            dupl=1;
+    }
+  }
+  
+  printf("\nThe number of duplicate elements are: %d", count);
+  if(dupl==0){
+    printf("\nNo duplicate elements");
+  }else{
+    printf("\nYes, It has Duplicate elements");
+  }
+  return 0;
+}
